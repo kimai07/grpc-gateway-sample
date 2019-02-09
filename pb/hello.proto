@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package hello;
+
+// Greetingサービス定義
+service Greeter {
+  // HelloRequestを受け取って、HelloReplyを返すメソッド
+  rpc SayHello (HelloRequest) returns (HelloResponse) {}
+}
+
+// HelloRequest のリクエスト定義
+message HelloRequest {
+  string name = 1;
+}
+
+// HelloReply のレスポンス定義
+message HelloResponse {
+  string msg = 1;
+}
